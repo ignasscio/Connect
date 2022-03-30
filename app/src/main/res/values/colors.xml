@@ -7,4 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Definición de colores para el proyecto -->
+    <!-- archivo de referencia: /docs_proyectofinal/guidelines.pdf -->
+    <color name="colorPrincipal">#8AACCB</color>
+    <color name="textoOscuro">#292929</color>
+    <color name="textoMedio">#828282</color>
+    <color name="textoClaro">#a6a6a6</color>
+    <color name="titulosResaltados">#568aba</color>
+    <color name="verde_70">#94d3a1</color>
+    <color name="morado_70">#aca1b7</color>
+    <color name="rosa_70">#ea8f8f</color>
+    <color name="amarillo_70">#f2c37e</color>
+    <color name="azul_70">#8aaccb</color>
+    <color name="rojo">#e8614d</color>
+
 </resources>

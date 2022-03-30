@@ -1,3 +1,99 @@
 <resources>
     <string name="app_name">Connect</string>
+
+    <!-- Definición de strings para el proyecto -->
+    <!-- Documento de referencia: /docs_proyectofinal/mockups.pdf -->
+
+    <string name="registrate">Regístrate</string>
+    <string name="correoElectronico">Correo electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="crearCuenta">Crear cuenta</string>
+    <string name="recordatorioCuenta">¿O ya tienes cuenta?</string>
+    <string name="iniciarSesion">Inicia sesión</string>
+    <string name="entrar">Entrar</string>
+    <string name="creaTuCuenta">Crea tu cuenta</string>
+    <string name="nombreDeUsuario">Nombre de usuario</string>
+    <string name="comienza">Comienza</string>
+    <string name="hint_correoElectronico">nombre@gmail.com</string>
+    <string name="hint_contrasena">**********</string>
+    <string name="accesoRapido">Acceso rápido</string>
+    <string name="chat">Chat</string>
+    <string name="calendario">Calendario</string>
+    <string name="notasRecientes">Notas recientes</string>
+    <string name="documentosRecientes">Documentos recientes</string>
+    <string name="multimediaReciente">Multimedia reciente</string>
+    <string name="pizarraReciente">Pizarra reciente</string>
+    <string name="configuracion">Configuración</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="notificaciones_desc">Las notificaciones push estarán activas</string>
+    <string name="sonido">Sonido</string>
+    <string name="sonido_desc">Notificaciones, sonidos en la aplicación, tono de llamada</string>
+    <string name="tema">Tema</string>
+    <string name="tema_desc">Tema claro - Tema oscuro</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="ayuda_desc">Al pulsar el botón se le enviará un correo a nuestro servicio al cliente quien se encargará de contactarle y verificar el problema</string>
+    <string name="hint_nombreDeGrupo">Nombre de grupo</string>
+    <string name="hint_integrantes">Integrantes</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="crear">Crear</string>
+    <string name="enviar">Envíar</string>
+    <string name="rechazar">Rechazar</string>
+    <!-- Silvia Morales (Silvy_M@gmail.com) te ha mandado una solicitud de amistad -->
+    <string name="desc_invitacionAmistad">te ha mandado una solicitud de amistad.</string>
+    <string name="alerta_invitacionAmistad">¡Alguien te ha mandado una invitación de amistad!</string>
+    <string name="anadirAGrupo">Añadir a grupo</string>
+    <string name="elimniar">Eliminar</string>
+    <string name="amigos">Amigos</string>
+    <string name="perfil">Perfil</string>
+    <string name="nombreUsuario">Nombre de usuario</string>
+    <string name="cambiarContrasena">Cambiar contraseña</string>
+    <string name="guardar">Guardar</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="nuevoEvento">Nuevo evento</string>
+    <string name="fecha">Fecha</string>
+    <string name="hora">Hora</string>
+    <string name="color">Color</string>
+    <string name="descripcion">Descripción</string>
+    <string name="invitados">Invitados</string>
+    <string name="seguroDeEliminar">¿Estás seguro de eliminar este elemento?</string>
+    <string name="desc_seguroDeElminar">Una vez eliminado este elemento no se podrá recuperar.</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="comparte">¡Comparte!</string>
+    <string name="desc_comparte_1">Coloca su correo electrónico para mandarle una invitación</string>
+    <string name="desc_comparte_2">Coloca su correo electrónico para mandarle una invitación</string>
+    <string name="okay">okay</string> <!-- wtf -->
+    <!-- Enviado a las 5:00 PM -->
+    <string name="horaEnviado">Enviado a las </string>
+    <string name="multimedia">Multimedia</string>
+    <string name="documentos">Documentos</string>
+    <string name="herramientas">Herramientas</string>
+    <string name="notasRapidas">Notas rápidas</string>
+    <string name="pizarraVirtual">Pizarra virtual</string>
+    <string name="encuestasRapidas">Encuestas rápidas</string>
+    <string name="participantes">Participantes</string>
+    <string name="compartirPantalla">Compartir Pantalla</string>
+    <string name="hint_escribaSuPregunta">Escriba su pregunta</string>
+    <string name="respuestaTipo">Respuesta tipo:</string>
+    <string name="tipoRespuesta_opcionMultiple">Opción múltiple</string>
+    <string name="tipoRespuesta_texto">Texto</string>
+    <string name="continuar">Continuar</string>
+    <string name="comoLesParecio">¿Cómo les pareció?</string>
+    <string name="hint_escribaSuRespuesta">Escriba su respusta</string>
+    <string name="preguntaCrearPizarra">¿Está seguro que desea crear una pizarra?</string>
+    <string name="hint_nombrePizarra">Nueva pizarra</string>
+    <string name="quienesPuedenEditarPizarra">¿Quiénes pueden editarla?</string>
+    <string name="permisoPizarra_1">Sólo yo</string>
+    <string name="permisoPizarra_2">Todos</string>
+    <string name="encuesta_EscribaLasOpciones">Escriba las opciones</string>
+    <string name="hint_nuevaOpcion">Nueva opción</string>
+    <string name="pregunta_ComoLesParecio">¿Cómo les pareció?</string>
+    <string name="opinion_bueno">Bueno</string>
+    <string name="opinion_malo">Malo</string>
+    <string name="pregunta_compartirPantalla">¿Está seguro que desea compartir pantalla?</string>
+    <string name="desc_compartirPantalla">Los participantes de la llamada podrán ver su pantalla.</string>
+    <string name="hint_tituloNotaRapida">Título</string>
+    <string name="hint_contenidoNotaRapida">Escriba su nota</string>
+
+
+
 </resources>
