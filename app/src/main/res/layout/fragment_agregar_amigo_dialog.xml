@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AgregarAmigoFragmentDialog"
+    android:background="@drawable/dialog_style"
+    android:padding="15dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/agregarAmigo_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¡Invita a tus amigos y compañeros!"
+            android:textColor="@color/titulosResaltados"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView android:id="@+id/agregarAmigo_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coloca su correo electrónico para mandarle una invitación"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/textoClaro"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText android:id="@+id/agregarAmigo_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#aaa"
+            android:textColorHint="#fff"
+            android:hint="@string/correoElectronico"
+            android:textColor="@color/textoOscuro"
+            android:padding="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:paddingTop="20dp">
+
+            <Button android:id="@+id/nuevoGrupo_btn_cancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:background="@drawable/boton_cancelar"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:textColor="@color/white" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <Button android:id="@+id/nuevoGrupo_btn_aceptar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:layout_weight="2"
+                android:background="@drawable/boton_aceptar"
+                android:padding="5dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

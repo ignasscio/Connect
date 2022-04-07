@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <LinearLayout android:id="@+id/evento_color"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/azul_70">
+        <!-- Este linearlayout va vacío. Sólo cambia su color-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="6"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView android:id="@+id/evento_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tema 1"
+            android:textColor="@color/textoOscuro"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <TextView android:id="@+id/evento_descripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reunión importante"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView android:id="@+id/evento_fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22/07/2024"
+            android:textColor="@color/textoMedio"
+            android:fontFamily="@font/montserrat_regular"/>
+
+        <TextView android:id="@+id/evento_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1:00 pm"
+            android:textColor="@color/textoMedio"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

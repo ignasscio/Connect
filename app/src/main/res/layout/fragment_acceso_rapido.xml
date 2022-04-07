@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AccesoRapidoFragment"
+    android:background="@color/white"
+    android:paddingTop="@dimen/fullbar_padding_top">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView android:id="@+id/accesoRapido_tv_notasRecientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notasRecientes"
+                android:textSize="20sp"
+                android:textColor="@color/textoOscuro"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/accesoRapido_rv_notasRecientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/accesorapido_view"
+                tools:itemCount="5"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView android:id="@+id/accesoRapido_tv_documentosRecientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/documentosRecientes"
+                android:textSize="20sp"
+                android:textColor="@color/textoOscuro"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/accesoRapido_rv_documentosRecientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                tools:listitem="@layout/accesorapido_view"
+                tools:itemCount="5"/>
+
+            <TextView android:id="@+id/accesoRapido_tv_multimediaReciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/multimediaReciente"
+                android:textSize="20sp"
+                android:textColor="@color/textoOscuro"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/accesoRapido_rv_multimediaReciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                tools:listitem="@layout/accesorapido_view"
+                tools:itemCount="5"/>
+
+            <TextView android:id="@+id/accesoRapido_tv_pizarraReciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizarraReciente"
+                android:textSize="20sp"
+                android:textColor="@color/textoOscuro"
+                android:fontFamily="@font/montserrat_bold"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/accesoRapido_rv_pizarraReciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                tools:listitem="@layout/accesorapido_view"
+                tools:itemCount="5"/>
+
+        </LinearLayout>
+
+</ScrollView>
+</FrameLayout>

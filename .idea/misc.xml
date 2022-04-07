@@ -3,10 +3,58 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable-xxhdpi/radiobutton_amarillo.xml" value="0.1515" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable-xxhdpi/radiobutton_morado.xml" value="0.1" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable-xxhdpi/radiobutton_rojo.xml" value="0.1515" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable-xxhdpi/receive_round_box.xml" value="0.1265" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable-xxhdpi/send_round_box.xml" value="0.1" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/amigo_view.xml" value="0.13" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/boton_aceptar.xml" value="0.179" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/boton_cancelar.xml" value="0.179" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/boton_entrar.xml" value="0.179" />
-        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_main.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/dialog_style.xml" value="0.13" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/edittext_style.xml" value="0.143" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/navbar.xml" value="0.13" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/notasrecientes_resource.xml" value="0.13" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/radiobutton_verde.xml" value="0.1" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/radiobutton_verde_unchecked.xml" value="0.1" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/rounder.xml" value="0.183" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/textbox.xml" value="0.1" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/accesorapido_view.xml" value="0.5" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_amigos.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_archivos_del_grupo.xml" value="0.22" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_chat.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_configuracion.xml" value="0.22" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_crear_cuenta.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_documento.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_inicio.xml" value="0.18" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_inicio_sesion.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_materiales.xml" value="0.22" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_multimedia.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_perfil.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_registro.xml" value="0.2" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/amigo_view.xml" value="0.22" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/conversation_view.xml" value="0.33" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/documento_view.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/evento_view.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_acceso_rapido.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_agregar_amigo_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_agregar_nota_dialog.xml" value="0.5" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_alerta_amistad_dialog.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_calendario.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_chat.xml" value="0.22" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_configuration.xml" value="0.1935185185185185" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_editor_evento_dialog.xml" value="0.22" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_eliminar_evento__dialog.xml" value="0.11481481481481481" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_eliminar_evento_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_inicio.xml" value="0.12" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_nuevo_grupo_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_principal.xml" value="0.1935185185185185" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_profile.xml" value="0.1935185185185185" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/image_view.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/message_item.xml" value="0.33" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

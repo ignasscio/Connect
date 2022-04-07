@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.AmigosActivity">
+
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrincipal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView android:id="@+id/configuracion_iv_atras"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/atras_blanco"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.Toolbar android:id="@+id/mainToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrincipal"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:title="@string/amigos"
+                app:titleTextColor="@color/white"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout android:id="@+id/inicio_rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="55dp">
+
+        <ScrollView android:id="@+id/amigos_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="30dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/amigo_view"
+                android:paddingLeft="30dp"/>
+
+        </ScrollView>
+
+        <LinearLayout android:id="@+id/inicio_bottomNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignBottom="@id/amigos_scrollview"
+            android:background="@drawable/navbar"
+            android:weightSum="4"
+            android:padding="15dp">
+
+            <ImageView android:id="@+id/amigos_amigos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_amigos"
+                android:layout_weight="1"/>
+
+            <ImageView android:id="@+id/amigos_grupos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_nuevogrupo"
+                android:layout_weight="1"/>
+
+            <ImageView android:id="@+id/amigos_agregarAmigo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_agregaramigo"
+                android:layout_weight="1"/>
+
+            <!-- Este cambia cuando hay solicitudes nuevas o no -->
+            <ImageView android:id="@+id/amigos_solicitudesAmistad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_solicitudamistad_on"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

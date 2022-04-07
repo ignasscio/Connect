@@ -10,7 +10,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Connect">
         <activity
-            android:name=".Activities.MainActivity"
+            android:name=".activities.DocumentoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MultimediaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ArchivosDelGrupoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MaterialesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AmigosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ConfiguracionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.InicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CrearCuentaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.InicioSesionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

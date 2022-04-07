@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.EliminarEventoFragmentDialog"
+    android:background="@drawable/dialog_style"
+    android:padding="15dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/eliminarEvento_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seguroDeEliminar"
+            android:textColor="@color/textoOscuro"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView android:id="@+id/eliminarEvento_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desc_seguroDeElminar"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/textoClaro"
+            android:layout_marginBottom="5dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:paddingTop="20dp">
+
+            <Button android:id="@+id/alertaAmistad_btn_cancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:background="@drawable/boton_cancelar"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:textColor="@color/white"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <Button android:id="@+id/alertaAmistad_btn_aceptar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Confirmar"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:background="@drawable/boton_aceptar"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

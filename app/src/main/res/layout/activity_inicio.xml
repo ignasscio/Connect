@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InicioActivity">
+
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrincipal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center|left">
+
+            <ImageView android:id="@+id/inicio_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+                android:layout_marginLeft="10dp"/>
+
+            <androidx.appcompat.widget.Toolbar android:id="@+id/mainToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrincipal"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+                app:titleTextColor="@color/white"
+            />
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/white"
+            app:tabBackground="@color/colorPrincipal"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout android:id="@+id/inicio_rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="50dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <LinearLayout android:id="@+id/inicio_bottomNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignBottom="@id/view_pager"
+            android:background="@drawable/navbar"
+            android:weightSum="3"
+            android:padding="15dp">
+
+            <ImageView android:id="@+id/inicio_ajustes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ajustes"
+                android:layout_weight="1"/>
+
+            <ImageView android:id="@+id/inicio_amigos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/amigos"
+                android:layout_weight="1"/>
+
+            <ImageView android:id="@+id/inicio_perfil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/perfil"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

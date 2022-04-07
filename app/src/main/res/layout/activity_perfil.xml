@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PerfilActivity"
+    android:background="@color/white"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrincipal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView android:id="@+id/configuracion_iv_atras"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/atras_blanco"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.Toolbar android:id="@+id/mainToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrincipal"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:title="@string/perfil"
+                app:titleTextColor="@color/white"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fullbar_padding_top"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView android:id="@+id/perfil_fotoPerfil"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/btn_amigos"
+                    android:background="@drawable/rounder"
+                    />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/nuevafotoperfil"
+                    android:layout_alignRight="@id/perfil_fotoPerfil"
+                    android:layout_alignBottom="@id/perfil_fotoPerfil"/>
+
+            </RelativeLayout>
+
+            <TextView android:id="@+id/perfil_nombreUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombreDeUsuario"
+                android:layout_gravity="left"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginTop="30dp"/>
+
+            <EditText android:id="@+id/perfil_et_nombreUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_style"
+                android:hint="Ingrese un nombre"
+                android:textColor="@color/textoOscuro"
+                android:fontFamily="@font/montserrat_regular"
+                android:inputType="textPersonName"
+                />
+
+            <TextView android:id="@+id/perfil_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/correoElectronico"
+                android:layout_gravity="left"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginTop="30dp"/>
+
+            <EditText android:id="@+id/perfil_et_correoElectronico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_style"
+                android:hint="Ingrese un correo electrónico"
+                android:textColor="@color/textoOscuro"
+                android:fontFamily="@font/montserrat_regular"
+                android:inputType="textEmailAddress"
+                />
+
+            <TextView android:id="@+id/perfil_cambiarContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cambiarContrasena"
+                android:layout_gravity="left"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginTop="30dp"
+                />
+
+            <EditText android:id="@+id/perfil_et_cambiarContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_style"
+                android:hint="Ingrese una nueva contraseña"
+                android:textColor="@color/textoOscuro"
+                android:fontFamily="@font/montserrat_regular"
+                android:inputType="textPassword"
+                />
+
+            <Button android:id="@+id/perfil_btn_guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guardar"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="30dp"
+                android:layout_marginTop="40dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

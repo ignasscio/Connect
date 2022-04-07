@@ -8,8 +8,9 @@
     <string name="correoElectronico">Correo electrónico</string>
     <string name="contrasena">Contraseña</string>
     <string name="crearCuenta">Crear cuenta</string>
-    <string name="recordatorioCuenta">¿O ya tienes cuenta?</string>
+    <string name="recordatorioCuenta"><u>¿O ya tienes cuenta?</u></string>
     <string name="iniciarSesion">Inicia sesión</string>
+    <string name="iniciarSesionBold"><b>Inicia sesión</b></string>
     <string name="entrar">Entrar</string>
     <string name="creaTuCuenta">Crea tu cuenta</string>
     <string name="nombreDeUsuario">Nombre de usuario</string>
@@ -93,7 +94,11 @@
     <string name="desc_compartirPantalla">Los participantes de la llamada podrán ver su pantalla.</string>
     <string name="hint_tituloNotaRapida">Título</string>
     <string name="hint_contenidoNotaRapida">Escriba su nota</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsum">Dicta reprehenderit aperiam laboriosam tempora. Corporis ut enim at expedita expedita. Et illo veniam neque. Explicabo dolores minima dolorem quam quo nulla ut. Itaque quis dolorum cumque aut fugiat aperiam est.\n\nUt quia corrupti ut. Fugit magni asperiores minima. Et harum molestiae quia aperiam.\n\nQui et quibusdam enim quaerat dolor est possimus perspiciatis. Sint odit quibusdam placeat vel eum a. Sunt harum provident soluta qui sequi quis ab. Totam praesentium quod et eius laborum et. Ipsam modi rerum voluptatem ut dicta voluptatibus occaecati.\n\nDignissimos mollitia alias blanditiis ipsa ut temporibus. Nam ipsam qui eaque dolorem ullam. Qui quibusdam sed enim eius suscipit voluptas tempore non. Nemo soluta ut id. Aut nulla quasi voluptatem nesciunt quasi.\n\nOptio fugit in enim occaecati. Eos quis ipsa non eos molestiae enim. Suscipit aut eius reprehenderit velit accusamus dolor. Quo quos autem tempore quaerat. Placeat voluptates cumque ab. Beatae sint error delectus est eveniet non quod.</string>
 
+    <string name="principal">Principal</string>
 
 
 </resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CalendarioFragment"
+    android:background="@color/white"
+    android:paddingTop="@dimen/fullbar_padding_top">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout android:id="@+id/rl_Calendario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CalendarView android:id="@+id/calendarView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/CalenderViewCustom"
+                    android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                    android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:elevation="0dp"/>
+
+                <ImageView android:id="@+id/calendario_iv_nuevoEvento"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/mas_azul"
+                    android:clickable="true"
+                    android:layout_alignBottom="@id/calendarView"
+                    android:layout_alignRight="@id/calendarView"
+                    android:elevation="5dp"/>
+
+            </RelativeLayout>
+            
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/lista_eventos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

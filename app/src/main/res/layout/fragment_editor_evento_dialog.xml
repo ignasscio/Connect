@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.EditorEventoFragmentDialog"
+    android:background="@drawable/dialog_style"
+    android:padding="15dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText android:id="@+id/editorEvento_tituloEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textoMedio"
+            android:hint="@string/nuevoEvento"
+            android:textColorHint="@color/textoClaro"
+            android:fontFamily="@font/montserrat_bold"
+            android:paddingVertical="5dp"/>
+
+        <LinearLayout
+            android:paddingVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha"
+                android:textSize="16sp"/>
+
+            <EditText android:id="@+id/editorEvento_fechaEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:hint="DD/MM/AA"
+                android:textColor="@color/textoMedio"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hora"
+                android:textSize="16dp"/>
+
+            <EditText android:id="@+id/editorEvento_horaEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:minEms="10"
+                android:hint="00:00"
+                android:textColor="@color/textoMedio"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/color"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <RadioGroup android:id="@+id/editorEvento_colorEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton android:id="@+id/verde"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radiobutton_verde"
+                    android:checked="true"
+                    android:layout_marginHorizontal="15dp"
+                    />
+
+                <RadioButton android:id="@+id/morado"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radiobutton_morado"
+                    android:layout_marginHorizontal="15dp"
+                    />
+
+                <RadioButton android:id="@+id/rojo"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radiobutton_rojo"
+                    android:layout_marginHorizontal="15dp"
+                    />
+
+                <RadioButton android:id="@+id/amarillo"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radiobutton_amarillo"
+                    android:layout_marginHorizontal="15dp"
+                    />
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/descripcion"
+            android:paddingVertical="5dp"
+            android:textSize="16dp"/>
+
+        <EditText android:id="@+id/editorEvento_descripcionEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_style"
+            android:textColor="@color/textoMedio"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/invitados"
+            android:paddingVertical="5dp"
+            android:textSize="16dp"/>
+
+        <EditText android:id="@+id/editorEvento_invitadosEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_style"
+            android:textColor="@color/textoMedio"
+            android:padding="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="10"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></LinearLayout>
+
+            <Button android:id="@+id/editorEvento_cancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:layout_weight="2"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight=".2"></LinearLayout>
+
+            <Button android:id="@+id/editorEvento_aceptar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Aceptar"
+                android:textColor="@color/white"
+                android:layout_weight="2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

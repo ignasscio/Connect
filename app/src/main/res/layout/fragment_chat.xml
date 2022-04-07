@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ChatFragment"
+    android:background="@color/white"
+    android:paddingTop="@dimen/fullbar_padding_top">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp">
+
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/chat_lastConversations"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <!-- borrar esto después -->
+            <TextView android:id="@+id/aaaaaaaaaaaaaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="48dp"
+                android:text="ESTAS EN EL CHAT"
+                android:textColor="@color/textoOscuro"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
