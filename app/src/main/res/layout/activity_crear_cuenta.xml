@@ -46,17 +46,18 @@
 
     </RelativeLayout>
 
-    <TextView android:id="@+id/registro_tv_correoElectronico"
+    <TextView android:id="@+id/registro_tv_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/nombreDeUsuario"
         android:textColor="@color/textoOscuro"
+        android:textColorHint="@color/textoClaro"
         android:textSize="24sp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/montserrat_bold"
         />
 
-    <EditText android:id="@+id/registro_et_correoElectronico"
+    <EditText android:id="@+id/registro_et_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
@@ -67,7 +68,7 @@
         android:background="@drawable/textbox"/>
 
 
-    <Button android:id="@+id/registro_btn_iniciarSesion"
+    <Button android:id="@+id/registro_btn_comienza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/comienza"

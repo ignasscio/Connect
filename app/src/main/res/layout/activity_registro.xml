@@ -41,9 +41,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
+        android:textColor="@color/textoOscuro"
         android:hint="hola@mundo.com"
         android:textSize="22sp"
         android:padding="10dp"
+        android:textColorHint="@color/textoClaro"
         android:background="@drawable/textbox"/>
 
     <TextView android:id="@+id/registro_tv_contrasena"
@@ -60,6 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
+        android:textColorHint="@color/textoClaro"
         android:hint="*********"
         android:textColor="@color/textoOscuro"
         android:background="@drawable/textbox"

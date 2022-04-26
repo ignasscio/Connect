@@ -86,6 +86,7 @@
         android:layout_marginTop="80dp">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/multimedia_imagenes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/image_view"

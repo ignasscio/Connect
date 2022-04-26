@@ -12,5 +12,8 @@ class InicioSesionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
     }
 }

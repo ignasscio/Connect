@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "61979963998",
+    "project_id": "connect-b7199",
+    "storage_bucket": "connect-b7199.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61979963998:android:c8e1b0d21a85f45134facf",
+        "android_client_info": {
+          "package_name": "itson.equipo4.connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61979963998-90fss1ftp0jpfsrep9t9e491lhv6ua5b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "itson.equipo4.connect",
+            "certificate_hash": "d41ef8396fce4e86d3252b9c982b08702d01d0bf"
+          }
+        },
+        {
+          "client_id": "61979963998-m8tg0ocpckuk3cf7vrcbc25r9r0vipoi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2xrWwfQ_pVcBOMGTBFCHg4HFj5Ark5Pc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61979963998-m8tg0ocpckuk3cf7vrcbc25r9r0vipoi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
