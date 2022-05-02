@@ -14,6 +14,7 @@
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/boton_entrar.xml" value="0.179" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/dialog_style.xml" value="0.13" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/edittext_style.xml" value="0.143" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/item_normallist.xml" value="0.119" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/navbar.xml" value="0.13" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/notasrecientes_resource.xml" value="0.13" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/drawable/radiobutton_verde.xml" value="0.1" />
@@ -28,7 +29,7 @@
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_crear_cuenta.xml" value="0.25" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_documento.xml" value="0.25" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_inicio.xml" value="0.18" />
-        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_inicio_sesion.xml" value="0.33" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_inicio_sesion.xml" value="0.25" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_main.xml" value="0.15" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_materiales.xml" value="0.22" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/activity_multimedia.xml" value="0.20104166666666667" />
@@ -41,7 +42,7 @@
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_acceso_rapido.xml" value="0.25" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_agregar_amigo_dialog.xml" value="0.25" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_agregar_nota_dialog.xml" value="0.5" />
-        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_alerta_amistad_dialog.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_alerta_amistad_dialog.xml" value="0.33" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_calendario.xml" value="0.25" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_chat.xml" value="0.22" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_configuration.xml" value="0.1935185185185185" />
@@ -54,6 +55,7 @@
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/fragment_profile.xml" value="0.1935185185185185" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/image_view.xml" value="0.20104166666666667" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/message_item.xml" value="0.33" />
+        <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/layout/nuevoamigo_view.xml" value="0.21" />
         <entry key="..\:/Users/ohcan/AndroidStudioProjects/Connect/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>

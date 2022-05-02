@@ -65,9 +65,11 @@
                     android:layout_height="150dp"
                     android:src="@drawable/btn_amigos"
                     android:background="@drawable/rounder"
+                    android:clipToOutline="true"
+
                     />
 
-                <ImageView
+                <ImageView android:id="@+id/perfil_iv_cambiarFotoPerfil"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:src="@drawable/nuevafotoperfil"

@@ -43,6 +43,8 @@
         android:inputType="textEmailAddress"
         android:hint="hola@mundo.com"
         android:textSize="22sp"
+        android:textColor="@color/textoOscuro"
+        android:textColorHint="@color/textoClaro"
         android:padding="10dp"
         android:background="@drawable/textbox"/>
 
@@ -62,6 +64,7 @@
         android:inputType="textPassword"
         android:hint="*********"
         android:textColor="@color/textoOscuro"
+        android:textColorHint="@color/textoClaro"
         android:background="@drawable/textbox"
         android:textSize="22sp"
         android:padding="10dp"

@@ -9,18 +9,42 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import itson.equipo4.connect.databinding.ActivityInicioBinding
 import itson.equipo4.connect.databinding.ActivityRegistroBinding
 import itson.equipo4.connect.fragments.SectionsPagerAdapter
+import itson.equipo4.connect.objetosnegocio.Usuario
 
 class InicioActivity : AppCompatActivity() {
 
+
+    private val db = FirebaseFirestore.getInstance()
+    private val auth = FirebaseAuth.getInstance()
     lateinit var binding: ActivityInicioBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInicioBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        //da la bienvenida
+        val extras = intent.extras
+        val user = extras?.get("user") as FirebaseUser
+        var usuario = Usuario("un email", "una contraseña", "un nombre")
+        db.collection("usuarios").get().addOnSuccessListener { result ->
+            for(document in result){
+                if(document.id == user.email){
+                    usuario = document.toObject(Usuario::class.java)
+                }
+            }
+            Toast.makeText(baseContext, "Bienvenido, "+usuario.nombre,Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener{e ->
+            Toast.makeText(baseContext, "Error: "+e.message, Toast.LENGTH_SHORT).show()
+        }
 
         //define el toolbar
         var toolbar = binding.mainToolbar as Toolbar
@@ -42,16 +66,25 @@ class InicioActivity : AppCompatActivity() {
         }
 
         binding.inicioAmigos.setOnClickListener{
-            //Toast.makeText(this, "aaaaaaamigos", Toast.LENGTH_LONG).show()
-            var intent = Intent(this, AmigosActivity::class.java)
-            startActivity(intent)
+            gotoAmigos(user)
         }
 
         binding.inicioPerfil.setOnClickListener{
-            val intent = Intent(this, PerfilActivity::class.java)
-            startActivity(intent)
-            //Toast.makeText(this, "not impleeeemteeeeed yeeeeeet", Toast.LENGTH_LONG).show()
+            gotoPerfil(user)
         }
 
     }
+
+    fun gotoPerfil(user:FirebaseUser?){
+        val intent = Intent(this, PerfilActivity::class.java)
+        intent.putExtra("user",user)
+        startActivity(intent)
+    }
+
+    fun gotoAmigos(user:FirebaseUser?){
+        val intent = Intent(this, AmigosActivity::class.java)
+        intent.putExtra("user",user)
+        startActivity(intent)
+    }
+
 }

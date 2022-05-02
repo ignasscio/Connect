@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
 import itson.equipo4.connect.databinding.ActivityAmigosBinding
 import itson.equipo4.connect.fragments.AgregarAmigoFragmentDialog
 import itson.equipo4.connect.fragments.AlertaAmistadFragmentDialog
@@ -14,11 +16,14 @@ class AmigosActivity : AppCompatActivity() {
 
     lateinit var binding:ActivityAmigosBinding
     var contador:Int = 0;
+    private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAmigosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val user = intent.extras?.get("user") as FirebaseUser
 
         binding.amigosAmigos.setOnClickListener {
             if(contador < 10){
@@ -40,21 +45,37 @@ class AmigosActivity : AppCompatActivity() {
         }
 
         binding.amigosAgregarAmigo.setOnClickListener {
-            //var bundle = Bundle()
-            //bundle.put-whatever
+            var bundle = Bundle()
+            bundle.putString("saludo","hola")
+            bundle.putParcelable("user",user)
             var dialog = AgregarAmigoFragmentDialog()
-            // dialog.arguments = bundle
+            dialog.arguments = bundle
             dialog.show(supportFragmentManager,"AgregarAmigoFragmentDialog")
         }
 
         binding.amigosSolicitudesAmistad.setOnClickListener {
-            var hayAmigos:Boolean = true
-            if(hayAmigos){
-                var dialog = AlertaAmistadFragmentDialog()
-                dialog.show(supportFragmentManager, "AlertaAmistadFragmentDialog")
-            }else{
+            var hayAmigos:Boolean = false
+            var lista:ArrayList<String> = ArrayList<String>()
+            db.collection("solicitudes").document(user.email!!).get().addOnSuccessListener { document ->
+                if(!(document["emails"] == null)){
+                    lista = document["emails"] as ArrayList<String>
+                    hayAmigos = true
+                }
+                if(hayAmigos){
+                    var dialog = AlertaAmistadFragmentDialog()
+                    var bundle = Bundle()
+                    bundle.putParcelable("user",user)
+                    bundle.putStringArrayList("lista",lista)
+                    dialog.arguments = bundle
+                    dialog.show(supportFragmentManager, "AlertaAmistadFragmentDialog")
+                }else{
+                    Toast.makeText(this,"No tienes solicitudes de amistad.",Toast.LENGTH_SHORT).show()
+                }
+            }.addOnFailureListener{
                 Toast.makeText(this,"No tienes solicitudes de amistad.",Toast.LENGTH_SHORT).show()
             }
+
+
         }
 
     }

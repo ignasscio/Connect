@@ -40,7 +40,7 @@
     <string name="enviar">Envíar</string>
     <string name="rechazar">Rechazar</string>
     <!-- Silvia Morales (Silvy_M@gmail.com) te ha mandado una solicitud de amistad -->
-    <string name="desc_invitacionAmistad">te ha mandado una solicitud de amistad.</string>
+    <string name="desc_invitacionAmistad">Las siguientes personas te han mandado una solicitud de amistad</string>
     <string name="alerta_invitacionAmistad">¡Alguien te ha mandado una invitación de amistad!</string>
     <string name="anadirAGrupo">Añadir a grupo</string>
     <string name="elimniar">Eliminar</string>

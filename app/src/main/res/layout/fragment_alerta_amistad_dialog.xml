@@ -27,8 +27,20 @@
             android:layout_height="wrap_content"
             android:text="@string/desc_invitacionAmistad"
             android:fontFamily="@font/montserrat_bold"
-            android:textColor="@color/textoClaro"
+            android:textColor="@color/textoOscuro"
             android:layout_marginBottom="5dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridView android:id="@+id/listaAmigos"
+                android:layout_width="match_parent"
+                android:numColumns="1"
+                tools:listitem="@layout/nuevoamigo_view"
+                android:layout_height="wrap_content"/>
+
+        </ScrollView>
 
 
         <LinearLayout

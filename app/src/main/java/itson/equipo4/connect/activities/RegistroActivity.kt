@@ -24,6 +24,14 @@ class RegistroActivity : AppCompatActivity() {
         binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.registroTvYaTienesCuenta.setOnClickListener {
+            goToInicioSesion()
+        }
+
+        binding.registroBtnIniciarSesion.setOnClickListener {
+            goToInicioSesion()
+        }
+
 
         binding.registroBtnCrearCuenta.setOnClickListener {
             var bundle:Bundle = Bundle();
@@ -50,5 +58,11 @@ class RegistroActivity : AppCompatActivity() {
             Toast.makeText(this,"Not implemented yet.",Toast.LENGTH_SHORT).show()
         }
 
+    }
+
+    fun goToInicioSesion(){
+        val intent:Intent = Intent(this, InicioSesionActivity::class.java);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
     }
 }

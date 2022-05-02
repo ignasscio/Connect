@@ -58,16 +58,12 @@ class CrearCuentaActivity : AppCompatActivity() {
                 val extras = intent.extras
                 email = extras?.getString("email")!!;
                 password = extras?.getString("password")!!;
-                print("email -> "+email)
-                print("password ->" +password)
                 fAouth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(this){
                     val user: FirebaseUser = fAouth.currentUser!!
                     verifyEmail(user)
-                    db.collection("usuarios").document(email).set(
-                        hashMapOf(
-                            "email" to email,
-                            "password" to password,
-                            "nombre" to nombre
+                    db.collection("usuarios").document(user.email!!).set(
+                        Usuario(
+                            email, password, nombre, "imagesProfile/"+user.email
                         )
                     ).addOnSuccessListener {
                         uploadFile(user)
@@ -110,8 +106,7 @@ class CrearCuentaActivity : AppCompatActivity() {
             val progressDialog = ProgressDialog(this)
             progressDialog.setTitle("Cargando...")
             progressDialog.show()
-
-            storageReference!!.child("imagesProfile/"+user.uid).putFile(direccionImagenPerfil!!).addOnSuccessListener {
+            storageReference!!.child("imagesProfile/"+user.email).putFile(direccionImagenPerfil!!).addOnSuccessListener {
                 progressDialog.dismiss()
                 Toast.makeText(this,"Éxito al subir imagen de perfil",Toast.LENGTH_LONG).show()
             }.addOnFailureListener {e ->
