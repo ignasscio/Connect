@@ -1,13 +1,13 @@
 package itson.equipo4.connect.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import itson.equipo4.connect.Utils
 import itson.equipo4.connect.databinding.ActivityInicioSesionBinding
-import itson.equipo4.connect.databinding.ActivityRegistroBinding
 
 class InicioSesionActivity : AppCompatActivity() {
 
@@ -20,19 +20,34 @@ class InicioSesionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.registroBtnIniciarSesion.setOnClickListener {
-            val mEmail = binding.registroEtCorreoElectronico.text.toString().trim()
-            val mPassword = binding.registroEtContrasena.text.toString().trim()
-            if(mEmail.isEmpty() && mPassword.isEmpty()){
-                Toast.makeText(baseContext, "Por favor ingrese sus datos correctamente", Toast.LENGTH_SHORT).show()
-            }else{
-                auth.signInWithEmailAndPassword(mEmail, mPassword).addOnSuccessListener {
-                    goToInicio(auth.currentUser)
-                }.addOnFailureListener { e ->
-                    Toast.makeText(baseContext, "Error al iniciar sesion: "+e.message, Toast.LENGTH_LONG).show()
-                }
-            }
+            signUserIn()
         }
 
+    }
+
+    /**
+     * Here we perform a simple check on both text fields to see if any of them
+     * is empty; if neither are empty then we ask Firebase to fetch the account
+     * from the database.
+     *
+     * If the email doesn't exist or the password is incorrect then we don't allow
+     * the user to log in; otherwise, we store the session and send the user to
+     * the home page.
+     */
+    private fun signUserIn() {
+        val mEmail = binding.registroEtCorreoElectronico.text.toString().trim()
+        val mPassword = binding.registroEtContrasena.text.toString().trim()
+
+        if (mEmail.isEmpty() && mPassword.isEmpty()) {
+            Utils.displayShortToast("Por favor ingrese sus datos correctamente", baseContext)
+            return
+        }
+
+        auth.signInWithEmailAndPassword(mEmail, mPassword).addOnSuccessListener {
+            goToInicio(auth.currentUser)
+        }.addOnFailureListener { e ->
+            Utils.displayLongToast("Error al iniciar sesion: " + e.message, baseContext)
+        }
     }
 
     fun goToInicio(user:FirebaseUser?){

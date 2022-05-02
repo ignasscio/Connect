@@ -17,6 +17,18 @@
         android:src="@drawable/logo"
         />
 
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-7dp"
+        android:backgroundTint="@color/white"
+        android:indeterminate="true"
+        android:indeterminateTint="#1a09d6"
+        android:max="100"
+        android:visibility="gone" />
+
     <TextView android:id="@+id/registro_tv_registrate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,14 +43,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageView android:id="@+id/crearCuenta_iv_fotoPerfil"
+        <ImageView
+            android:id="@+id/crearCuenta_iv_fotoPerfil"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:src="@drawable/perfil"
-            android:scaleType="centerCrop"
-            android:clipToOutline="true"
             android:background="@drawable/rounder"
-            />
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/perfil" />
 
         <ImageView android:id="@+id/crearCuenta_iv_nuevaFotoPerfil"
             android:layout_width="100dp"
