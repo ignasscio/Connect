@@ -22,7 +22,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        when(position){
+        when (position) {
             0 -> return AccesoRapidoFragment()
             1 -> return ChatFragment()
             2 -> return CalendarioFragment()

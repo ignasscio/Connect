@@ -25,7 +25,7 @@ import java.util.regex.Pattern
 class PerfilActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityPerfilBinding
-    private var direccionImagenPerfil: Uri?=null
+    private var direccionImagenPerfil: Uri? = null
     private val storageReference = FirebaseStorage.getInstance().reference
     private val auth = FirebaseAuth.getInstance()
 
@@ -37,25 +37,24 @@ class PerfilActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding =  ActivityPerfilBinding.inflate(layoutInflater)
+        binding = ActivityPerfilBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
         val extras = intent.extras
         val user = extras?.get("user") as FirebaseUser
-        val store = FirebaseStorage.getInstance().reference.child("imagesProfile/"+user.uid)
-        val localFile = File.createTempFile("tempImage","jpg")
+        val store = FirebaseStorage.getInstance().reference.child("imagesProfile/" + user.uid)
+        val localFile = File.createTempFile("tempImage", "jpg")
         store.getFile(localFile).addOnSuccessListener {
             val fileImage = BitmapFactory.decodeFile(localFile.absolutePath)
             binding.perfilFotoPerfil.setImageBitmap(fileImage)
-        }.addOnFailureListener{e->
+        }.addOnFailureListener { e ->
             Utils.displayShortToast("Error: " + e.message, baseContext)
         }
 
 
-
         val db = FirebaseFirestore.getInstance()
-        db.collection("usuarios").document(user.uid!!).get().addOnSuccessListener { document ->
+        db.collection("usuarios").document(user.uid).get().addOnSuccessListener { document ->
             val usuario = document.toObject(Usuario::class.java)
             binding.perfilEtNombreUsuario.setText(usuario?.nombre)
             binding.perfilEtCorreoElectronico.setText(usuario?.email)
@@ -123,7 +122,7 @@ class PerfilActivity : AppCompatActivity() {
         ).addOnSuccessListener {
             user.updateEmail(email)
 
-            if (!password.isEmpty()) {
+            if (password.isNotEmpty()) {
                 user.updatePassword(password)
             }
 

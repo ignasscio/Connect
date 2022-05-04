@@ -5,55 +5,60 @@
     android:orientation="horizontal"
     android:weightSum="10">
 
-    <LinearLayout android:id="@+id/evento_color"
+    <LinearLayout
+        android:id="@+id/evento_color"
         android:layout_width="0dp"
-        android:layout_weight="1"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/azul_70">
+        android:layout_weight="1"
+        android:background="@color/azul_70"
+        android:orientation="vertical">
         <!-- Este linearlayout va vacío. Sólo cambia su color-->
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_weight="6"
         android:layout_height="wrap_content"
+        android:layout_weight="6"
         android:orientation="vertical"
         android:padding="10dp">
 
-        <TextView android:id="@+id/evento_titulo"
+        <TextView
+            android:id="@+id/evento_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
             android:text="Tema 1"
-            android:textColor="@color/textoOscuro"
-            android:fontFamily="@font/montserrat_bold"/>
+            android:textColor="@color/textoOscuro" />
 
-        <TextView android:id="@+id/evento_descripcion"
+        <TextView
+            android:id="@+id/evento_descripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reunión importante"/>
+            android:text="Reunión importante" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_weight="3"
         android:layout_height="wrap_content"
+        android:layout_weight="3"
         android:orientation="vertical"
         android:padding="10dp">
 
-        <TextView android:id="@+id/evento_fecha"
+        <TextView
+            android:id="@+id/evento_fecha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
             android:text="22/07/2024"
-            android:textColor="@color/textoMedio"
-            android:fontFamily="@font/montserrat_regular"/>
+            android:textColor="@color/textoMedio" />
 
-        <TextView android:id="@+id/evento_hora"
+        <TextView
+            android:id="@+id/evento_hora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1:00 pm"
-            android:textColor="@color/textoMedio"/>
+            android:textColor="@color/textoMedio" />
 
     </LinearLayout>
 

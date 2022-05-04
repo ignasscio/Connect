@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.PerfilActivity"
     android:background="@color/white"
-    >
+    tools:context=".activities.PerfilActivity">
 
-    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
@@ -48,14 +48,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/fullbar_padding_top"
         android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        >
+        android:paddingRight="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ProgressBar
                 android:id="@+id/progressbar"
@@ -83,90 +82,94 @@
 
                     />
 
-                <ImageView android:id="@+id/perfil_iv_cambiarFotoPerfil"
+                <ImageView
+                    android:id="@+id/perfil_iv_cambiarFotoPerfil"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:src="@drawable/nuevafotoperfil"
                     android:layout_alignRight="@id/perfil_fotoPerfil"
-                    android:layout_alignBottom="@id/perfil_fotoPerfil"/>
+                    android:layout_alignBottom="@id/perfil_fotoPerfil"
+                    android:src="@drawable/nuevafotoperfil" />
 
             </RelativeLayout>
 
-            <TextView android:id="@+id/perfil_nombreUsuario"
+            <TextView
+                android:id="@+id/perfil_nombreUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nombreDeUsuario"
                 android:layout_gravity="left"
-                android:textSize="20sp"
-                android:fontFamily="@font/montserrat_bold"
-                android:layout_marginTop="30dp"/>
-
-            <EditText android:id="@+id/perfil_et_nombreUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:padding="15dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/edittext_style"
-                android:hint="Ingrese un nombre"
-                android:textColor="@color/textoOscuro"
-                android:fontFamily="@font/montserrat_regular"
-                android:inputType="textPersonName"
-                />
-
-            <TextView android:id="@+id/perfil_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/correoElectronico"
-                android:layout_gravity="left"
-                android:textSize="20sp"
-                android:fontFamily="@font/montserrat_bold"
-                android:layout_marginTop="30dp"/>
-
-            <EditText android:id="@+id/perfil_et_correoElectronico"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:padding="15dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/edittext_style"
-                android:hint="Ingrese un correo electrónico"
-                android:textColor="@color/textoOscuro"
-                android:fontFamily="@font/montserrat_regular"
-                android:inputType="textEmailAddress"
-                />
-
-            <TextView android:id="@+id/perfil_cambiarContrasena"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cambiarContrasena"
-                android:layout_gravity="left"
-                android:textSize="20sp"
-                android:fontFamily="@font/montserrat_bold"
                 android:layout_marginTop="30dp"
-                />
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/nombreDeUsuario"
+                android:textSize="20sp" />
 
-            <EditText android:id="@+id/perfil_et_cambiarContrasena"
+            <EditText
+                android:id="@+id/perfil_et_nombreUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:padding="15dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/edittext_style"
-                android:hint="Ingrese una nueva contraseña"
-                android:textColor="@color/textoOscuro"
                 android:fontFamily="@font/montserrat_regular"
-                android:inputType="textPassword"
-                />
+                android:hint="Ingrese un nombre"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:textColor="@color/textoOscuro" />
 
-            <Button android:id="@+id/perfil_btn_guardar"
+            <TextView
+                android:id="@+id/perfil_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/guardar"
-                android:textColor="@color/white"
+                android:layout_gravity="left"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/correoElectronico"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/perfil_et_correoElectronico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_style"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Ingrese un correo electrónico"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:textColor="@color/textoOscuro" />
+
+            <TextView
+                android:id="@+id/perfil_cambiarContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/cambiarContrasena"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/perfil_et_cambiarContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_style"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Ingrese una nueva contraseña"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textColor="@color/textoOscuro" />
+
+            <Button
+                android:id="@+id/perfil_btn_guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:paddingHorizontal="30dp"
-                android:layout_marginTop="40dp"/>
+                android:text="@string/guardar"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 

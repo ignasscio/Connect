@@ -2,7 +2,6 @@ package itson.equipo4.connect.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -50,7 +49,7 @@ class InicioSesionActivity : AppCompatActivity() {
         }
     }
 
-    fun goToInicio(user:FirebaseUser?){
+    fun goToInicio(user: FirebaseUser?) {
         val intent = Intent(this, InicioActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.putExtra("user", user)

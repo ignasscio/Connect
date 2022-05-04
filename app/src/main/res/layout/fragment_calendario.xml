@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CalendarioFragment"
     android:background="@color/white"
-    android:paddingTop="@dimen/fullbar_padding_top">
+    android:paddingTop="@dimen/fullbar_padding_top"
+    tools:context=".fragments.CalendarioFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,39 +14,43 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
             android:paddingLeft="35dp"
-            android:paddingRight="35dp"
-            android:gravity="center_horizontal">
+            android:paddingRight="35dp">
 
-            <RelativeLayout android:id="@+id/rl_Calendario"
+            <RelativeLayout
+                android:id="@+id/rl_Calendario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <CalendarView android:id="@+id/calendarView"
+                <CalendarView
+                    android:id="@+id/calendarView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:theme="@style/CalenderViewCustom"
-                    android:dateTextAppearance="@style/CalenderViewDateCustomText"
-                    android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:elevation="0dp"/>
+                    android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                    android:elevation="0dp"
+                    android:theme="@style/CalenderViewCustom"
+                    android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
 
-                <ImageView android:id="@+id/calendario_iv_nuevoEvento"
+                <ImageView
+                    android:id="@+id/calendario_iv_nuevoEvento"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/mas_azul"
-                    android:clickable="true"
-                    android:layout_alignBottom="@id/calendarView"
                     android:layout_alignRight="@id/calendarView"
-                    android:elevation="5dp"/>
+                    android:layout_alignBottom="@id/calendarView"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:src="@drawable/mas_azul" />
 
             </RelativeLayout>
-            
-            <androidx.recyclerview.widget.RecyclerView android:id="@+id/lista_eventos"
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lista_eventos"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 

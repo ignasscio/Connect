@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".activities.ArchivosDelGrupoActivity"
-    >
+    tools:context=".activities.ArchivosDelGrupoActivity">
 
-    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
@@ -20,62 +20,66 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView android:id="@+id/configuracion_iv_atras"
+            <ImageView
+                android:id="@+id/configuracion_iv_atras"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/atras_blanco"
+                android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_gravity="center"
-                android:contentDescription="cómo que debo poner contentDescripcion?"/>
+                android:contentDescription="cómo que debo poner contentDescripcion?"
+                android:src="@drawable/atras_blanco" />
 
-            <ImageView android:id="@+id/chat_foto"
+            <ImageView
+                android:id="@+id/chat_foto"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/btn_amigos"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/btn_amigos" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="vertical"
-                android:weightSum="3"
-                android:layout_gravity="center">
+                android:weightSum="3">
 
-                <androidx.appcompat.widget.Toolbar android:id="@+id/chat_nombre"
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/chat_nombre"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2"
                     android:background="@color/colorPrincipal"
-                    app:title="Equipo 3"
-                    app:titleTextColor="@color/white"
                     android:textAlignment="textStart"
-                    />
+                    app:title="Equipo 3"
+                    app:titleTextColor="@color/white" />
 
-                <TextView android:id="@+id/chat_integrantes"
+                <TextView
+                    android:id="@+id/chat_integrantes"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:paddingLeft="15dp"
-                    android:textColor="@color/white"
-                    android:text="María, Ernesto, Felipe"/>
+                    android:text="María, Ernesto, Felipe"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
-            <ImageView android:id="@+id/chat_videollamada"
+            <ImageView
+                android:id="@+id/chat_videollamada"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:src="@drawable/chat_video"
                 android:layout_gravity="center|right"
                 android:paddingHorizontal="20dp"
-                />
-            <ImageView android:id="@+id/chat_menuPuntos"
+                android:src="@drawable/chat_video" />
+
+            <ImageView
+                android:id="@+id/chat_menuPuntos"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:src="@drawable/menu_puntos"
                 android:layout_gravity="center|right"
                 android:paddingHorizontal="20dp"
-                />
+                android:src="@drawable/menu_puntos" />
 
         </LinearLayout>
 
@@ -89,16 +93,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginHorizontal="30dp">
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical">
 
-            <TextView android:id="@+id/archivosGrupo_tv_multimedia"
+            <TextView
+                android:id="@+id/archivosGrupo_tv_multimedia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/multimedia"
+                android:layout_marginVertical="5dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:textSize="18sp"
-                android:layout_marginVertical="5dp"/>
+                android:text="@string/multimedia"
+                android:textSize="18sp" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -107,26 +112,28 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginVertical="5dp">
+                    android:layout_marginVertical="5dp"
+                    android:orientation="horizontal">
 
-                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/archivosGrupo_imagenesReciente"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/archivosGrupo_imagenesReciente"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:listitem="@layout/image_view"
-                        tools:itemCount="3" />
+                        tools:itemCount="3"
+                        tools:listitem="@layout/image_view" />
 
                 </LinearLayout>
 
             </HorizontalScrollView>
 
-            <TextView android:id="@+id/archivosGrupo_tv_documentos"
+            <TextView
+                android:id="@+id/archivosGrupo_tv_documentos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/documentos"
+                android:layout_marginVertical="5dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:textSize="18sp"
-                android:layout_marginVertical="5dp"/>
+                android:text="@string/documentos"
+                android:textSize="18sp" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -136,116 +143,118 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginVertical="5dp">
+                    android:layout_marginVertical="5dp"
+                    android:orientation="horizontal">
 
-                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/archivosGrupo_documentos"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/archivosGrupo_documentos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:listitem="@layout/accesorapido_view"
-                        tools:itemCount="3"/>
+                        tools:itemCount="3"
+                        tools:listitem="@layout/accesorapido_view" />
 
                 </LinearLayout>
 
             </HorizontalScrollView>
 
-            <TextView android:id="@+id/archivosGrupo_tv_herramientas"
+            <TextView
+                android:id="@+id/archivosGrupo_tv_herramientas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/herramientas"
+                android:layout_marginVertical="5dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:textSize="18sp"
-                android:layout_marginVertical="5dp"/>
+                android:text="@string/herramientas"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginVertical="10dp"
-                android:layout_weight="5"
-                android:gravity="center"
-                android:layout_marginHorizontal="30dp">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="25dp"
-                    android:src="@drawable/notarapida_azul"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="4"
-                    android:layout_height="wrap_content"
-                    android:text="@string/notasRapidas"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textSize="14sp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="5"
-                android:gravity="center"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginVertical="10dp">
+                android:layout_marginVertical="10dp"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:src="@drawable/pizarravirtual_azul"/>
+                    android:layout_weight="1"
+                    android:src="@drawable/notarapida_azul" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:text="@string/pizarraVirtual"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="14sp"/>
+                    android:text="@string/notasRapidas"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
                 android:layout_weight="5"
                 android:gravity="center"
-                android:layout_marginVertical="10dp"
-                android:layout_marginHorizontal="30dp">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:src="@drawable/encuestarapida_azul"/>
+                    android:layout_weight="1"
+                    android:src="@drawable/pizarravirtual_azul" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_weight="4"
                     android:layout_height="wrap_content"
-                    android:text="@string/encuestasRapidas"
+                    android:layout_weight="4"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="14sp"/>
+                    android:text="@string/pizarraVirtual"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/encuestarapida_azul" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/encuestasRapidas"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/participantes"
                 android:layout_marginVertical="5dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:textSize="18sp"/>
+                android:text="@string/participantes"
+                android:textSize="18sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/amigo_view"
+                android:layout_marginVertical="5dp"
                 tools:itemCount="2"
-                android:layout_marginVertical="5dp"/>
+                tools:listitem="@layout/amigo_view" />
 
         </LinearLayout>
 

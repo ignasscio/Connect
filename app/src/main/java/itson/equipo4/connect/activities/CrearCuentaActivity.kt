@@ -11,7 +11,6 @@ import android.provider.MediaStore
 import android.text.TextUtils
 import android.view.View
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -31,7 +30,7 @@ class CrearCuentaActivity : AppCompatActivity() {
     private var email by Delegates.notNull<String>()
     private var password by Delegates.notNull<String>()
     private var nombre by Delegates.notNull<String>()
-    private var direccionImagenPerfil:Uri?=null
+    private var direccionImagenPerfil: Uri? = null
     private val db = FirebaseFirestore.getInstance()
     private val storage = FirebaseStorage.getInstance()
     private val storageReference = storage.reference
@@ -67,16 +66,15 @@ class CrearCuentaActivity : AppCompatActivity() {
      * user to complete any missing steps of the registration.
      */
     private fun registerUser() {
-        nombre = binding.registroEtNombre.text.toString().trim();
+        nombre = binding.registroEtNombre.text.toString().trim()
 
         if (TextUtils.isEmpty(nombre)) {
-            Toast.makeText(this, "Por favor ingrese su nombre", Toast.LENGTH_SHORT).show()
+            Utils.displayShortToast("Por favor ingrese su nombre", this)
             return
         }
 
         if (direccionImagenPerfil == null) {
-            Toast.makeText(this, "Por favor seleccione una imagen de perfil", Toast.LENGTH_SHORT)
-                .show()
+            Utils.displayShortToast("Por favor seleccione una imagen de perfil", this)
             return
         }
 
@@ -88,7 +86,7 @@ class CrearCuentaActivity : AppCompatActivity() {
         fAouth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(this) {
             insertCreatedUserToDatabase()
         }.addOnFailureListener { e ->
-            goToRegistroActivity(e)
+            launchRegistro(e)
         }
     }
 
@@ -111,9 +109,9 @@ class CrearCuentaActivity : AppCompatActivity() {
             Usuario(email, password, nombre, "imagesProfile/" + user.email)
         ).addOnSuccessListener {
             uploadFile(user)
-            goToLoginActivity()
+            launchLogin()
         }.addOnFailureListener { e ->
-            goToRegistroActivity(e)
+            launchRegistro(e)
         }
     }
 
@@ -134,7 +132,6 @@ class CrearCuentaActivity : AppCompatActivity() {
         direccionImagenPerfil = uri
 
         try {
-
             val bitmap: Bitmap? = if (Build.VERSION.SDK_INT >= 29) {
                 val source: ImageDecoder.Source =
                     ImageDecoder.createSource(this.contentResolver, direccionImagenPerfil!!)
@@ -150,7 +147,7 @@ class CrearCuentaActivity : AppCompatActivity() {
         }
     }
 
-    private fun uploadFile(user:FirebaseUser){
+    private fun uploadFile(user: FirebaseUser) {
         if (direccionImagenPerfil != null) {
             showProgressBar()
             storageReference.child("imagesProfile/" + user.email).putFile(direccionImagenPerfil!!)
@@ -160,26 +157,29 @@ class CrearCuentaActivity : AppCompatActivity() {
                 }.addOnFailureListener { e ->
                     hideProgressBar()
                     Utils.displayLongToast("Error al subir imagen de perfil. " + e.message, this)
-                    goToRegistroActivity(e)
+                    launchRegistro(e)
                 }
         }
     }
 
-    private fun goToRegistroActivity(e:Exception){
-        Toast.makeText(this, "Error al registrarte, "+nombre.toString()+". "+e.message.toString(), Toast.LENGTH_LONG).show()
-        val intent:Intent = Intent(this, RegistroActivity::class.java)
+    private fun launchRegistro(e: Exception) {
+        Utils.displayLongToast(
+            "Error al registrarte, " + nombre + ". " + e.message.toString(),
+            this
+        )
+        val intent = Intent(this, RegistroActivity::class.java)
         intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
 
-    private fun goToLoginActivity(){
-        Toast.makeText(this, "Éxito al crear tu cuenta, "+nombre.toString(), Toast.LENGTH_SHORT).show()
-        val intent:Intent = Intent(this, InicioSesionActivity::class.java)
+    private fun launchLogin() {
+        Utils.displayShortToast("Éxito al crear tu cuenta, $nombre", this)
+        val intent = Intent(this, InicioSesionActivity::class.java)
         intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
 
-    private fun sendEmailVerification(user:FirebaseUser) {
+    private fun sendEmailVerification(user: FirebaseUser) {
         user.sendEmailVerification().addOnCompleteListener(this) { Task ->
             if (Task.isSuccessful) {
                 Utils.displayShortToast("Se ha enviado un correo de verificación a " + email, this)

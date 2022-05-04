@@ -7,7 +7,8 @@
     android:background="@color/white"
     tools:context=".activities.MaterialesActivity">
 
-    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
@@ -19,44 +20,47 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView android:id="@+id/configuracion_iv_atras"
+            <ImageView
+                android:id="@+id/configuracion_iv_atras"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/atras_blanco"
+                android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_gravity="center"/>
+                android:src="@drawable/atras_blanco" />
 
-            <ImageView android:id="@+id/chat_foto"
+            <ImageView
+                android:id="@+id/chat_foto"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/btn_amigos"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/btn_amigos" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="vertical"
-                android:weightSum="3"
-                android:layout_gravity="center">
+                android:weightSum="3">
 
-                <androidx.appcompat.widget.Toolbar android:id="@+id/chat_nombre"
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/chat_nombre"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2"
                     android:background="@color/colorPrincipal"
-                    app:title="Equipo 3"
-                    app:titleTextColor="@color/white"
                     android:textAlignment="textStart"
-                    />
+                    app:title="Equipo 3"
+                    app:titleTextColor="@color/white" />
 
-                <TextView android:id="@+id/chat_integrantes"
+                <TextView
+                    android:id="@+id/chat_integrantes"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:paddingLeft="15dp"
-                    android:textColor="@color/white"
-                    android:text="María, Ernesto, Felipe"/>
+                    android:text="María, Ernesto, Felipe"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
@@ -76,31 +80,33 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView android:id="@+id/material_titulo"
+            <TextView
+                android:id="@+id/material_titulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Título"
                 android:fontFamily="@font/montserrat_bold"
-                android:textSize="24sp"
-                android:paddingVertical="10dp"/>
+                android:paddingVertical="10dp"
+                android:text="Título"
+                android:textSize="24sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/accesorapido_view"
-                tools:itemCount="5"/>
+                tools:itemCount="5"
+                tools:listitem="@layout/accesorapido_view" />
 
         </LinearLayout>
 
 
     </ScrollView>
 
-    <ImageView android:id="@+id/materiales_nuevo"
+    <ImageView
+        android:id="@+id/materiales_nuevo"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/mas_azul"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/mas_azul" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

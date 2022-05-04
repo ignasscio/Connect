@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorPrincipal"
-    tools:context=".activities.RegistroActivity"
     android:gravity="center"
+    android:orientation="vertical"
     android:paddingLeft="50dp"
-    android:paddingRight="50dp">
+    android:paddingRight="50dp"
+    tools:context=".activities.RegistroActivity">
 
-    <ImageView android:id="@+id/registro_logo"
+    <ImageView
+        android:id="@+id/registro_logo"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/logo"
-        />
+        android:src="@drawable/logo" />
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -29,15 +28,15 @@
         android:max="100"
         android:visibility="gone" />
 
-    <TextView android:id="@+id/registro_tv_registrate"
+    <TextView
+        android:id="@+id/registro_tv_registrate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/crearCuenta"
-        android:textColor="@color/textoOscuro"
-        android:textSize="36sp"
         android:fontFamily="@font/montserrat_bold"
+        android:text="@string/crearCuenta"
         android:textAlignment="center"
-        />
+        android:textColor="@color/textoOscuro"
+        android:textSize="36sp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -52,46 +51,48 @@
             android:scaleType="centerCrop"
             android:src="@drawable/perfil" />
 
-        <ImageView android:id="@+id/crearCuenta_iv_nuevaFotoPerfil"
+        <ImageView
+            android:id="@+id/crearCuenta_iv_nuevaFotoPerfil"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/nuevafotoperfil"
             android:layout_alignRight="@id/crearCuenta_iv_fotoPerfil"
-            android:layout_alignBottom="@id/crearCuenta_iv_fotoPerfil"/>
+            android:layout_alignBottom="@id/crearCuenta_iv_fotoPerfil"
+            android:src="@drawable/nuevafotoperfil" />
 
     </RelativeLayout>
 
-    <TextView android:id="@+id/registro_tv_nombre"
+    <TextView
+        android:id="@+id/registro_tv_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="@string/nombreDeUsuario"
         android:textColor="@color/textoOscuro"
         android:textColorHint="@color/textoClaro"
-        android:textSize="24sp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/montserrat_bold"
-        />
+        android:textSize="24sp" />
 
-    <EditText android:id="@+id/registro_et_nombre"
+    <EditText
+        android:id="@+id/registro_et_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:background="@drawable/textbox"
         android:hint="@string/hint_nombre"
-        android:textSize="24sp"
-        android:textColor="@color/textoOscuro"
+        android:inputType="textEmailAddress"
         android:shadowColor="@color/textoClaro"
-        android:background="@drawable/textbox"/>
+        android:textColor="@color/textoOscuro"
+        android:textSize="24sp" />
 
 
-    <Button android:id="@+id/registro_btn_comienza"
+    <Button
+        android:id="@+id/registro_btn_comienza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/comienza"
-        android:textSize="24sp"
-        android:fontFamily="@font/montserrat_bold"
-        android:background="@drawable/boton_aceptar"
-        android:textColor="@color/white"
         android:layout_marginTop="20dp"
-        />
+        android:background="@drawable/boton_aceptar"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/comienza"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
 
 </LinearLayout>

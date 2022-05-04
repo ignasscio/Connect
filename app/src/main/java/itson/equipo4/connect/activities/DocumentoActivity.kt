@@ -1,7 +1,7 @@
 package itson.equipo4.connect.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import itson.equipo4.connect.databinding.ActivityAmigosBinding
 
 class DocumentoActivity : AppCompatActivity() {

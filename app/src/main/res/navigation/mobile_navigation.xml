@@ -14,12 +14,12 @@
     <fragment
         android:id="@+id/navigation_principal"
         android:name="itson.equipo4.connect.Fragments.principal.PrincipalFragment"
-        tools:layout="@layout/fragment_principal"
-        android:label="@string/principal"/>
+        android:label="@string/principal"
+        tools:layout="@layout/fragment_principal" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="itson.equipo4.connect.Fragments.profile.ProfileFragment"
-        tools:layout="@layout/fragment_profile"
-        android:label="@string/perfil"/>
+        android:label="@string/perfil"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

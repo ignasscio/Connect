@@ -1,19 +1,12 @@
 package itson.equipo4.connect.fragments
 
-import android.media.Image
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.Toast
-import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.Fragment
 import itson.equipo4.connect.R
-import itson.equipo4.connect.databinding.FragmentCalendarioBinding
-import itson.equipo4.connect.databinding.FragmentEditorEventoDialogBinding
-import itson.equipo4.connect.databinding.FragmentInicioBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,7 +32,6 @@ class CalendarioFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
 
 
     }

@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AlertaAmistadFragmentDialog"
     android:background="@drawable/dialog_style"
-    android:padding="15dp">
+    android:padding="15dp"
+    tools:context=".fragments.AlertaAmistadFragmentDialog">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -13,32 +13,35 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView android:id="@+id/AlertaAmistad_titulo"
+        <TextView
+            android:id="@+id/AlertaAmistad_titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/montserrat_bold"
             android:text="@string/alerta_invitacionAmistad"
             android:textColor="@color/titulosResaltados"
-            android:fontFamily="@font/montserrat_bold"
-            android:textSize="18sp"
-            android:layout_marginBottom="5dp"/>
+            android:textSize="18sp" />
 
-        <TextView android:id="@+id/alertaAmistad_descripcion"
+        <TextView
+            android:id="@+id/alertaAmistad_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/desc_invitacionAmistad"
+            android:layout_marginBottom="5dp"
             android:fontFamily="@font/montserrat_bold"
-            android:textColor="@color/textoOscuro"
-            android:layout_marginBottom="5dp"/>
+            android:text="@string/desc_invitacionAmistad"
+            android:textColor="@color/textoOscuro" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <GridView android:id="@+id/listaAmigos"
+            <GridView
+                android:id="@+id/listaAmigos"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:numColumns="1"
-                tools:listitem="@layout/nuevoamigo_view"
-                android:layout_height="wrap_content"/>
+                tools:listitem="@layout/nuevoamigo_view" />
 
         </ScrollView>
 
@@ -46,32 +49,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_weight="5"
+            android:orientation="horizontal"
             android:paddingTop="20dp">
 
-            <Button android:id="@+id/alertaAmistad_btn_cancelar"
+            <Button
+                android:id="@+id/alertaAmistad_btn_cancelar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Rechazar"
-                android:background="@drawable/boton_cancelar"
                 android:layout_weight="2"
+                android:background="@drawable/boton_cancelar"
                 android:padding="5dp"
-                android:textColor="@color/white"/>
+                android:text="Rechazar"
+                android:textColor="@color/white" />
 
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
-            <Button android:id="@+id/alertaAmistad_btn_aceptar"
+            <Button
+                android:id="@+id/alertaAmistad_btn_aceptar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="aceptar"
                 android:layout_weight="2"
-                android:textColor="@color/white"
                 android:background="@drawable/boton_aceptar"
-                android:padding="5dp"/>
+                android:padding="5dp"
+                android:text="aceptar"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 

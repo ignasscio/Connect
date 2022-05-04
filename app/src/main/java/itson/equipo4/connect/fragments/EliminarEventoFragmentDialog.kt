@@ -3,11 +3,11 @@ package itson.equipo4.connect.fragments
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import itson.equipo4.connect.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,8 +35,8 @@ class EliminarEventoFragmentDialog : DialogFragment() {
 
     override fun onStart() {
         super.onStart()
-        val width = (resources.displayMetrics.widthPixels*.85).toInt()
-        val height = (resources.displayMetrics.heightPixels*.4).toInt()
+        val width = (resources.displayMetrics.widthPixels * .85).toInt()
+        val height = (resources.displayMetrics.heightPixels * .4).toInt()
         dialog!!.window?.setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 

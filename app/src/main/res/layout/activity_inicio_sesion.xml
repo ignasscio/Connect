@@ -1,86 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorPrincipal"
-    tools:context=".activities.RegistroActivity"
     android:gravity="center"
+    android:orientation="vertical"
     android:paddingLeft="50dp"
-    android:paddingRight="50dp">
+    android:paddingRight="50dp"
+    tools:context=".activities.RegistroActivity">
 
-    <ImageView android:id="@+id/registro_logo"
+    <ImageView
+        android:id="@+id/registro_logo"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/logo"
-        />
+        android:src="@drawable/logo" />
 
-    <TextView android:id="@+id/registro_tv_registrate"
+    <TextView
+        android:id="@+id/registro_tv_registrate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/iniciarSesionBold"
-        android:textColor="@color/textoOscuro"
-        android:textSize="36sp"
-        android:textAlignment="center"
         android:fontFamily="@font/montserrat_bold"
-        />
+        android:text="@string/iniciarSesionBold"
+        android:textAlignment="center"
+        android:textColor="@color/textoOscuro"
+        android:textSize="36sp" />
 
-    <TextView android:id="@+id/registro_tv_correoElectronico"
+    <TextView
+        android:id="@+id/registro_tv_correoElectronico"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="@string/correoElectronico"
         android:textColor="@color/textoOscuro"
-        android:textSize="24sp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/montserrat_bold"
-        />
+        android:textSize="24sp" />
 
-    <EditText android:id="@+id/registro_et_correoElectronico"
+    <EditText
+        android:id="@+id/registro_et_correoElectronico"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:hint="hola@mundo.com"
-        android:textSize="22sp"
-        android:textColor="@color/textoOscuro"
-        android:textColorHint="@color/textoClaro"
-        android:padding="10dp"
-        android:background="@drawable/textbox"/>
-
-    <TextView android:id="@+id/registro_tv_contrasena"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/contrasena"
-        android:textSize="24dp"
-        android:textColor="@color/textoOscuro"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/montserrat_bold"
-        />
-
-    <EditText android:id="@+id/registro_et_contrasena"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="*********"
-        android:textColor="@color/textoOscuro"
-        android:textColorHint="@color/textoClaro"
         android:background="@drawable/textbox"
-        android:textSize="22sp"
+        android:hint="hola@mundo.com"
+        android:inputType="textEmailAddress"
         android:padding="10dp"
-        />
+        android:textColor="@color/textoOscuro"
+        android:textColorHint="@color/textoClaro"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/registro_tv_contrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/contrasena"
+        android:textColor="@color/textoOscuro"
+        android:textSize="24dp" />
+
+    <EditText
+        android:id="@+id/registro_et_contrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textbox"
+        android:hint="*********"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/textoOscuro"
+        android:textColorHint="@color/textoClaro"
+        android:textSize="22sp" />
 
 
-    <Button android:id="@+id/registro_btn_iniciarSesion"
+    <Button
+        android:id="@+id/registro_btn_iniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/entrar"
-        android:textSize="18sp"
-        android:background="@drawable/boton_aceptar"
-        android:textColor="@color/white"
         android:layout_marginTop="20dp"
+        android:background="@drawable/boton_aceptar"
         android:fontFamily="@font/montserrat_bold"
         android:paddingHorizontal="50dp"
-        />
+        android:text="@string/entrar"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
 </LinearLayout>
