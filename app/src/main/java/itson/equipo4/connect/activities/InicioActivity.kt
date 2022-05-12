@@ -10,6 +10,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import itson.equipo4.connect.Utils
 import itson.equipo4.connect.databinding.ActivityInicioBinding
 import itson.equipo4.connect.fragments.SectionsPagerAdapter
 import itson.equipo4.connect.objetosnegocio.Usuario
@@ -30,16 +31,16 @@ class InicioActivity : AppCompatActivity() {
         //da la bienvenida
         val extras = intent.extras
         val user = extras?.get("user") as FirebaseUser
-        var usuario = Usuario("un email", "una contraseña", "un nombre")
+        var usuario = Usuario()
         db.collection("usuarios").get().addOnSuccessListener { result ->
             for (document in result) {
-                if (document.id == user.email) {
+                if (document.id == user.uid) {
                     usuario = document.toObject(Usuario::class.java)
                 }
             }
-            Toast.makeText(baseContext, "Bienvenido, " + usuario.nombre, Toast.LENGTH_SHORT).show()
+            Utils.displayShortToast("Bienvenido, " + usuario.nombre, baseContext)
         }.addOnFailureListener { e ->
-            Toast.makeText(baseContext, "Error: " + e.message, Toast.LENGTH_SHORT).show()
+            Utils.displayShortToast("Error: " + e.message, baseContext)
         }
 
         //define el toolbar

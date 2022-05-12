@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseUser
 import itson.equipo4.connect.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -52,6 +54,12 @@ class NuevoGrupoFragmentDialog : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //aquí se trabaja con la vista ya creada
+
+        val btn_cancelar = view?.findViewById<Button>(R.id.nuevoGrupo_btn_cancelar)
+
+        btn_cancelar.setOnClickListener {
+            dismiss()
+        }
     }
 
     companion object {

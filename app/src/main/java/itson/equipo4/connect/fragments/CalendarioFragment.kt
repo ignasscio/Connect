@@ -39,7 +39,7 @@ class CalendarioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val nuevoEvento = view?.findViewById(R.id.calendario_iv_nuevoEvento) as ImageView
+        val nuevoEvento = view.findViewById(R.id.calendario_iv_nuevoEvento) as ImageView
 
         nuevoEvento.setOnClickListener {
             val dialog = EditorEventoFragmentDialog()

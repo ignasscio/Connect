@@ -1,21 +1,30 @@
 package itson.equipo4.connect.activities
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.*
 import com.google.firebase.firestore.FirebaseFirestore
 import itson.equipo4.connect.Utils
+import itson.equipo4.connect.adapters.UsuarioAdapter
 import itson.equipo4.connect.databinding.ActivityAmigosBinding
 import itson.equipo4.connect.fragments.AgregarAmigoFragmentDialog
 import itson.equipo4.connect.fragments.AlertaAmistadFragmentDialog
 import itson.equipo4.connect.fragments.NuevoGrupoFragmentDialog
+import itson.equipo4.connect.objetosnegocio.Usuario
 
 class AmigosActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityAmigosBinding
-    var contador: Int = 0;
     private val db = FirebaseFirestore.getInstance()
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var userRecyclerView: RecyclerView
+    private lateinit var userList: ArrayList<Usuario>
+    private lateinit var adapter: UsuarioAdapter
+    private lateinit var mDbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +32,17 @@ class AmigosActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val user = intent.extras?.get("user") as FirebaseUser
+        mDbRef = FirebaseDatabase.getInstance().reference
+        mAuth = FirebaseAuth.getInstance()
+
+        userList = ArrayList()
+        adapter = UsuarioAdapter(this, userList)
+
+        userRecyclerView = binding.amigosRecyclerview
+        userRecyclerView.layoutManager = LinearLayoutManager(this)
+        userRecyclerView.adapter = adapter
+
+        showFriendsList(user)
 
         binding.amigosAmigos.setOnClickListener {
             showFriendsList(user)
@@ -96,16 +116,24 @@ class AmigosActivity : AppCompatActivity() {
      * For now it just pretends to close the app if you tap too many times on the button
      */
     private fun showFriendsList(user: FirebaseUser) {
-        if (contador < 10) {
-            when (contador) {
-                5 -> Toast.makeText(this, "¡DEJA DE HACER ESO!", Toast.LENGTH_SHORT).show()
-                7 -> Toast.makeText(this, "NOO!!", Toast.LENGTH_SHORT).show()
-                8 -> Toast.makeText(this, "¡PARA!", Toast.LENGTH_SHORT).show()
-                9 -> {
-                    Toast.makeText(this, "F. Cerraste la app.", Toast.LENGTH_SHORT).show()
+        mDbRef.child("user").addValueEventListener(object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                userList.clear()
+
+                for (postSnapshot in snapshot.children) {
+                    val currentUser = postSnapshot.getValue(Usuario::class.java)
+
+                    if (mAuth.currentUser?.email != currentUser?.email) {
+                        userList.add(currentUser!!)
+                    }
                 }
+
+                adapter.notifyDataSetChanged()
             }
-            contador++
-        }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+        })
     }
 }

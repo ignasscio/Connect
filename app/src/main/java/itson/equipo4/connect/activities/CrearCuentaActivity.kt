@@ -15,6 +15,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import itson.equipo4.connect.Utils
@@ -35,6 +37,7 @@ class CrearCuentaActivity : AppCompatActivity() {
     private val storage = FirebaseStorage.getInstance()
     private val storageReference = storage.reference
     private val fAouth = FirebaseAuth.getInstance()
+    private lateinit var mDbRef: DatabaseReference
 
     private val selectImageFromGallery =
         registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
@@ -105,14 +108,19 @@ class CrearCuentaActivity : AppCompatActivity() {
 
         sendEmailVerification(user)
 
-        db.collection("usuarios").document(user.email!!).set(
-            Usuario(email, password, nombre, "imagesProfile/" + user.email)
+        db.collection("usuarios").document(user.uid).set(
+            Usuario(user.uid, nombre, email, "***", "imagesProfile/" + user.uid)
         ).addOnSuccessListener {
             uploadFile(user)
             launchLogin()
         }.addOnFailureListener { e ->
             launchRegistro(e)
         }
+
+        mDbRef = FirebaseDatabase.getInstance().reference
+
+        mDbRef.child("user").child(user.uid)
+            .setValue(Usuario(user.uid, nombre, email, "***", "imagesProfile/" + user.uid))
     }
 
     /**

@@ -118,7 +118,7 @@ class PerfilActivity : AppCompatActivity() {
         }
 
         db.collection("usuarios").document(user.uid).set(
-            Usuario(email, password, nombre, "imagesProfile/" + user.uid)
+            Usuario(user.uid, nombre, email, password, "imagesProfile/" + user.uid)
         ).addOnSuccessListener {
             user.updateEmail(email)
 
@@ -145,7 +145,7 @@ class PerfilActivity : AppCompatActivity() {
      */
     private fun verificarContrasena(pass: String): Boolean {
         val patternString =
-            "(?=.*[0-9]+)(?=.*[a-z]+)(?=.*[A-Z]+).{6,}"
+            "(?=.*[0-9]+)(?=.*[a-z]+).{6,}"
         val pattern = Pattern.compile(patternString)
         val matcher = pattern.matcher(pass)
 

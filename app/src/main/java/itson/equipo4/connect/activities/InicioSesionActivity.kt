@@ -49,7 +49,7 @@ class InicioSesionActivity : AppCompatActivity() {
         }
     }
 
-    fun goToInicio(user: FirebaseUser?) {
+    private fun goToInicio(user: FirebaseUser?) {
         val intent = Intent(this, InicioActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.putExtra("user", user)
