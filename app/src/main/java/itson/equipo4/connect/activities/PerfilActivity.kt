@@ -52,7 +52,6 @@ class PerfilActivity : AppCompatActivity() {
             Utils.displayShortToast("Error: " + e.message, baseContext)
         }
 
-
         val db = FirebaseFirestore.getInstance()
         db.collection("usuarios").document(user.uid).get().addOnSuccessListener { document ->
             val usuario = document.toObject(Usuario::class.java)

@@ -6,7 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import itson.equipo4.connect.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.*
+import itson.equipo4.connect.adapters.EventoAdapter
+import itson.equipo4.connect.databinding.FragmentCalendarioBinding
+import itson.equipo4.connect.objetosnegocio.Evento
+import java.text.SimpleDateFormat
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,8 +32,16 @@ class CalendarioFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    //private var _binding: FragmentCalendarioBinding? = null
-    //private val binding get() = _binding!!
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var eventosRecyclerView: RecyclerView
+    private lateinit var eventosList: ArrayList<Evento>
+    private lateinit var adapter: EventoAdapter
+    private lateinit var mDbRef: DatabaseReference
+
+    private lateinit var selectedDate: String
+
+    private var _binding: FragmentCalendarioBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +56,7 @@ class CalendarioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val nuevoEvento = view.findViewById(R.id.calendario_iv_nuevoEvento) as ImageView
+        val nuevoEvento = binding.calendarioIvNuevoEvento as ImageView
 
         nuevoEvento.setOnClickListener {
             val dialog = EditorEventoFragmentDialog()
@@ -47,21 +64,71 @@ class CalendarioFragment : Fragment() {
             dialog.show(transaction, "EditorEventoFragmentDialog")
         }
 
-        //if(nuevoEvento != null){
-        //    Toast.makeText(context, "hola", Toast.LENGTH_SHORT).show()
-        //}else{
-        //    Toast.makeText(context, "adiós", Toast.LENGTH_SHORT).show()
-        //}
+        mDbRef = FirebaseDatabase.getInstance().reference
+        mAuth = FirebaseAuth.getInstance()
+
+        eventosList = ArrayList()
+        adapter = EventoAdapter(view.context, eventosList)
+
+        eventosRecyclerView = binding.listaEventos
+        eventosRecyclerView.layoutManager = LinearLayoutManager(view.context)
+        eventosRecyclerView.adapter = adapter
+
+        showEvents(FirebaseAuth.getInstance().currentUser)
+
+        val myCalendar = binding.calendarView
+
+        val date = Calendar.getInstance()
+        val sdf = SimpleDateFormat("dd/MM/yyyy")
+        selectedDate = sdf.format(date.time)
+
+        myCalendar.setOnDateChangeListener { view, year, month, dayOfMonth ->
+            selectedDate = "$dayOfMonth/$month/$year"
+            showEvents(FirebaseAuth.getInstance().currentUser)
+        }
 
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
+        _binding = FragmentCalendarioBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        return inflater.inflate(R.layout.fragment_calendario, container, false)
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun showEvents(user: FirebaseUser?) {
+        if (user != null) {
+            mDbRef.child("user").child(user.uid).child("eventos").addValueEventListener(object: ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    eventosList.clear()
+
+                    for (postSnapshot in snapshot.children) {
+                        val currentEvent = postSnapshot.getValue(Evento::class.java)
+
+                        val date: Calendar = Calendar.getInstance()
+                        val sdf = SimpleDateFormat("dd/MM/yyyy")
+                        val curDate = sdf.format(currentEvent?.fecha!!.time)
+
+                        if (curDate.equals(selectedDate)) {
+                            eventosList.add(currentEvent)
+                        }
+                    }
+
+                    adapter.notifyDataSetChanged()
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+            })
+        }
     }
 
     companion object {
