@@ -43,7 +43,14 @@ class InicioSesionActivity : AppCompatActivity() {
         }
 
         auth.signInWithEmailAndPassword(mEmail, mPassword).addOnSuccessListener {
-            goToInicio(auth.currentUser)
+            if (auth.currentUser!!.isEmailVerified) {
+                goToInicio(auth.currentUser)
+            } else {
+                Utils.displayLongToast(
+                    "Error al iniciar sesion: Correo electronico sin verificar",
+                    baseContext
+                )
+            }
         }.addOnFailureListener { e ->
             Utils.displayLongToast("Error al iniciar sesion: " + e.message, baseContext)
         }

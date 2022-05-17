@@ -10,17 +10,20 @@ import com.google.firebase.auth.FirebaseAuth
 import itson.equipo4.connect.R
 import itson.equipo4.connect.objetosnegocio.Mensaje
 
-class MensajeAdapter(val context: Context, val messageList: ArrayList<Mensaje>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MensajeAdapter(val context: Context, val messageList: ArrayList<Mensaje>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val ITEM_RECEIVE = 1
     private val ITEM_SENT = 2
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         if (viewType == 1) {
-            val view: View = LayoutInflater.from(context).inflate(R.layout.message_receive, parent, false)
+            val view: View =
+                LayoutInflater.from(context).inflate(R.layout.message_receive, parent, false)
             return ReceiveViewHolder(view)
         } else {
-            val view: View = LayoutInflater.from(context).inflate(R.layout.message_sent, parent, false)
+            val view: View =
+                LayoutInflater.from(context).inflate(R.layout.message_sent, parent, false)
             return SentViewHolder(view)
         }
     }

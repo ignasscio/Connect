@@ -101,17 +101,22 @@ class EditorEventoFragmentDialog : DialogFragment() {
         val formatoFecha = SimpleDateFormat("dd/MM/yyyy HH:mm")
         formatoFecha.isLenient = false
         try {
-            val date: Date = formatoFecha.parse(binding.editorEventoFechaEvento.text.toString() + " " + binding.editorEventoHoraEvento.text.toString()) as Date
+            val date: Date =
+                formatoFecha.parse(binding.editorEventoFechaEvento.text.toString() + " " + binding.editorEventoHoraEvento.text.toString()) as Date
             val tituloEvento = binding.editorEventoTituloEvento.text.toString()
             val descripcionEvento = binding.editorEventoDescripcionEvento.text.toString()
 
             mDbRef.child("user").child(user.uid).child("eventos").push()
-                .setValue(Evento(
-                    tituloEvento,
-                    descripcionEvento,
-                    date,
-                    selectedColor
-                ))
+                .setValue(
+                    Evento(
+                        tituloEvento,
+                        descripcionEvento,
+                        date,
+                        selectedColor
+                    )
+                )
+
+            dismiss()
         } catch (e: ParseException) {
             e.printStackTrace()
         }

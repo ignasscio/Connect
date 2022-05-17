@@ -10,7 +10,8 @@ import itson.equipo4.connect.R
 import itson.equipo4.connect.objetosnegocio.Evento
 import java.text.SimpleDateFormat
 
-class EventoAdapter (val context: Context, val eventosList: ArrayList<Evento>): RecyclerView.Adapter<EventoAdapter.EventoViewHolder>() {
+class EventoAdapter(val context: Context, val eventosList: ArrayList<Evento>) :
+    RecyclerView.Adapter<EventoAdapter.EventoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
         val view: View = LayoutInflater.from(context).inflate(R.layout.evento_view, parent, false)
@@ -24,8 +25,8 @@ class EventoAdapter (val context: Context, val eventosList: ArrayList<Evento>): 
 
         val sdf = SimpleDateFormat("dd/MM/yyyy")
         val sdfHora = SimpleDateFormat("HH:mm")
-        val eventFecha: String = sdf.format(currentEvent.fecha)
-        val eventHora: String = sdfHora.format(currentEvent.fecha)
+        val eventFecha: String = sdf.format(currentEvent.fecha!!)
+        val eventHora: String = sdfHora.format(currentEvent.fecha!!)
 
         holder.fecha.text = eventFecha
         holder.hora.text = eventHora

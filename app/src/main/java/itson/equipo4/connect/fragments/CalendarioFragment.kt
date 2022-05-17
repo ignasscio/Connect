@@ -105,29 +105,30 @@ class CalendarioFragment : Fragment() {
 
     private fun showEvents(user: FirebaseUser?) {
         if (user != null) {
-            mDbRef.child("user").child(user.uid).child("eventos").addValueEventListener(object: ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    eventosList.clear()
+            mDbRef.child("user").child(user.uid).child("eventos")
+                .addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        eventosList.clear()
 
-                    for (postSnapshot in snapshot.children) {
-                        val currentEvent = postSnapshot.getValue(Evento::class.java)
+                        for (postSnapshot in snapshot.children) {
+                            val currentEvent = postSnapshot.getValue(Evento::class.java)
 
-                        val date: Calendar = Calendar.getInstance()
-                        val sdf = SimpleDateFormat("dd/MM/yyyy")
-                        val curDate = sdf.format(currentEvent?.fecha!!.time)
+                            val date: Calendar = Calendar.getInstance()
+                            val sdf = SimpleDateFormat("dd/MM/yyyy")
+                            val curDate = sdf.format(currentEvent?.fecha!!.time)
 
-                        if (curDate.equals(selectedDate)) {
-                            eventosList.add(currentEvent)
+                            if (curDate.equals(selectedDate)) {
+                                eventosList.add(currentEvent)
+                            }
                         }
+
+                        adapter.notifyDataSetChanged()
                     }
 
-                    adapter.notifyDataSetChanged()
-                }
+                    override fun onCancelled(error: DatabaseError) {
 
-                override fun onCancelled(error: DatabaseError) {
-
-                }
-            })
+                    }
+                })
         }
     }
 

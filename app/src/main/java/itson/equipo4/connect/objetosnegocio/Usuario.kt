@@ -8,9 +8,15 @@ class Usuario {
     var uid: String? = null
     //var grupos:List<Grupo>?
 
-    constructor(){}
+    constructor() {}
 
-    constructor(uid: String?, nombre: String?, email: String?, password: String?, imgPerfil: String) {
+    constructor(
+        uid: String?,
+        nombre: String?,
+        email: String?,
+        password: String?,
+        imgPerfil: String
+    ) {
         this.uid = uid
         this.nombre = nombre
         this.email = email

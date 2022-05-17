@@ -116,7 +116,7 @@ class AmigosActivity : AppCompatActivity() {
      * For now it just pretends to close the app if you tap too many times on the button
      */
     private fun showFriendsList(user: FirebaseUser) {
-        mDbRef.child("user").addValueEventListener(object: ValueEventListener {
+        mDbRef.child("user").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 userList.clear()
 

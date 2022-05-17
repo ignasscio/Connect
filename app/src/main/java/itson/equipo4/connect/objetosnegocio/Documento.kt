@@ -6,7 +6,7 @@ class Documento {
     var nombre: String? = null
     var ruta: String = ""
 
-    constructor(){}
+    constructor() {}
 
     constructor(uid: String?, usuario: String?, nombre: String?, ruta: String) {
         this.uid = uid

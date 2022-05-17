@@ -9,11 +9,8 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.google.firebase.firestore.FirebaseFirestore
 import itson.equipo4.connect.adapters.DocumentoAdapter
-import itson.equipo4.connect.adapters.UsuarioAdapter
-import itson.equipo4.connect.databinding.ActivityAmigosBinding
 import itson.equipo4.connect.databinding.ActivityDocumentoBinding
 import itson.equipo4.connect.objetosnegocio.Documento
-import itson.equipo4.connect.objetosnegocio.Usuario
 
 class DocumentoActivity : AppCompatActivity() {
 
@@ -45,7 +42,7 @@ class DocumentoActivity : AppCompatActivity() {
     }
 
     private fun showDocumentContent(user: FirebaseUser) {
-        mDbRef.child("user").addValueEventListener(object: ValueEventListener {
+        mDbRef.child("user").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 documentsList.clear()
 

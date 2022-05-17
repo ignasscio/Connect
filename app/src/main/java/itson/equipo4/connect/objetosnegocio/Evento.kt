@@ -8,7 +8,7 @@ class Evento {
     var fecha: Date? = null
     var color: String? = null
 
-    constructor(){}
+    constructor() {}
 
     constructor(nombre: String?, descripcion: String, fecha: Date?, color: String?) {
         this.nombre = nombre

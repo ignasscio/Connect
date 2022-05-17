@@ -11,10 +11,12 @@ import itson.equipo4.connect.R
 import itson.equipo4.connect.activities.DocumentoActivity
 import itson.equipo4.connect.objetosnegocio.Nota
 
-class NotaAdapter(val context: Context, val notasList: ArrayList<Nota>): RecyclerView.Adapter<NotaAdapter.NotaViewHolder>() {
+class NotaAdapter(val context: Context, val notasList: ArrayList<Nota>) :
+    RecyclerView.Adapter<NotaAdapter.NotaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotaViewHolder {
-        val view: View = LayoutInflater.from(context).inflate(R.layout.accesorapido_view, parent, false)
+        val view: View =
+            LayoutInflater.from(context).inflate(R.layout.accesorapido_view, parent, false)
         return NotaViewHolder(view)
     }
 

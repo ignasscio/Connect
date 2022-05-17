@@ -11,10 +11,12 @@ import itson.equipo4.connect.R
 import itson.equipo4.connect.activities.DocumentoActivity
 import itson.equipo4.connect.objetosnegocio.Documento
 
-class DocumentoAdapter (val context: Context, val documentsList: ArrayList<Documento>): RecyclerView.Adapter<DocumentoAdapter.DocumentoViewHolder>() {
+class DocumentoAdapter(val context: Context, val documentsList: ArrayList<Documento>) :
+    RecyclerView.Adapter<DocumentoAdapter.DocumentoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DocumentoViewHolder {
-        val view: View = LayoutInflater.from(context).inflate(R.layout.accesorapido_view, parent, false)
+        val view: View =
+            LayoutInflater.from(context).inflate(R.layout.accesorapido_view, parent, false)
         return DocumentoViewHolder(view)
     }
 
